@@ -6,8 +6,10 @@ import axios from 'axios'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VueDisqus from 'vue-disqus'
 
 Vue.use(BootstrapVue)
+Vue.use(VueDisqus)
 Vue.config.productionTip = false
 
 const instance = axios.create({})
