@@ -17,6 +17,23 @@ const instance = axios.create({
   headers: {'Content-Type': 'application/json'}
 })
 
+instance.interceptors.response.use(
+  function (response) {
+    if (response.data) {
+      return response.data.response
+    } else {
+      return response
+    }
+  },
+  function (error) {
+    if (error.response) {
+      return Promise.reject(error.response.data.response)
+    } else {
+      return Promise.reject(error)
+    }
+  }
+)
+
 Vue.prototype.$http = instance
 
 new Vue({

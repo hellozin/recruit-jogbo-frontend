@@ -40,19 +40,15 @@ export default {
     onSubmit () {
       const formData = JSON.stringify(this.form)
       this.$http.post(`/auth`, formData)
-        .then(res => {
-          const response = res.data.response
+        .then(response => {
           localStorage.setItem('apiToken', response.apiToken)
           localStorage.setItem('username', response.member.username)
           this.$router.push('/')
         }).catch(error => {
-          if (error.response) {
-            const response = error.response.data.response
-            this.$bvToast.toast(response.errorMessage, {
-              title: '로그인 실패',
-              variant: 'danger'
-            })
-          }
+          this.$bvToast.toast(error.errorMessage, {
+            title: '로그인 실패',
+            variant: 'danger'
+          })
         })
     }
   }
