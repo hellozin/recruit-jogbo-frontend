@@ -41,6 +41,10 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   function (response) {
+    const apiToken = response.config.headers.api_key
+    if (apiToken) {
+      localStorage.setItem('apiToken', apiToken.split(' ')[1])
+    }
     if (response.data) {
       return response.data.response
     } else {
