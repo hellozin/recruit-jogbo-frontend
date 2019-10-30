@@ -8,7 +8,7 @@
       <table class="table table-hover">
         <thead class="thead-light">
           <tr>
-            <th class="text-center" v-for="header in tableHeaders" :key="header.id">{{ header }}</th>
+            <th class="text-center" style="width: 20%" v-for="header in tableHeaders" :key="header.id">{{ header }}</th>
           </tr>
         </thead>
 
@@ -38,7 +38,7 @@ export default {
   data () {
     return {
       reviewList: [],
-      tableHeaders: ['기업명', '기업추가정보', '전형종류', '마감일', '작성자'],
+      tableHeaders: ['기업명', '기업추가정보', '전형종류', '날짜', '작성자'],
       page: {
         totalPages: 0,
         currPage: 0,

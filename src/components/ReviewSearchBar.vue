@@ -47,7 +47,7 @@ export default {
       sort: [
         { value: '', text: '정렬', disabled: true },
         { value: 'createdAt,desc', text: '작성순' },
-        { value: 'deadLine,desc', text: '마감일순' }
+        { value: 'deadLine,desc', text: '날짜순' }
       ],
       emptyString: ''
     }
