@@ -36,7 +36,7 @@ export default {
         username: '',
         password: '',
         email: '',
-        confirmUrl: 'http://localhost:8081/confirm'
+        confirmUrl: `${location.origin}/confirm`
       }
     }
   },

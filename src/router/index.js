@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Join from '../views/Join.vue'
+import Confirm from '../views/Confirm.vue'
 import ReviewList from '../views/ReviewList.vue'
 import Review from '../views/Review.vue'
 import ReviewForm from '../views/ReviewForm.vue'
@@ -24,6 +25,10 @@ const routes = [
     path: '/join',
     name: 'join',
     component: Join
+  }, {
+    path: '/confirm',
+    name: 'confirm',
+    component: Confirm
   }, {
     path: '/review/list',
     name: 'reviewList',
