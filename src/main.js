@@ -52,7 +52,6 @@ instance.interceptors.response.use(
       const errorResponse = error.response.data.response
       if (errorResponse) {
         if(errorResponse.status === 'UNAUTHORIZED') {
-          alert('로그인 정보가 없습니다!')
           localStorage.removeItem('apiToken')
           localStorage.removeItem('username')
           window.location.href = '/login'
