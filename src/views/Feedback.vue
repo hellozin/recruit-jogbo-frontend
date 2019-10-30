@@ -19,9 +19,7 @@ export default {
   },
   created: function () {
     this.pageId = location.pathname
-    this.url = origin
-    console.log(this.pageId)
-    console.log(this.url)
+    this.url = location.origin
   }
 }
 </script>
