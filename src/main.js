@@ -8,6 +8,13 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueDisqus from 'vue-disqus'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faExclamationCircle, faEnvelope, faServer } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare, faSlack } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faExclamationCircle, faEnvelope, faGithubSquare, faServer, faSlack)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.use(VueDisqus)
