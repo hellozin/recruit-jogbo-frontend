@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import ReviewList from '../views/ReviewList.vue'
 import Review from '../views/Review.vue'
+import ReviewForm from '../views/ReviewForm.vue'
 import Feedback from '../views/Feedback.vue'
 import Contact from '../views/Contact.vue'
 
@@ -22,6 +23,14 @@ const routes = [
     path: '/review/list',
     name: 'reviewList',
     component: ReviewList
+  }, {
+    path: '/review/form',
+    name: 'reviewCreateForm',
+    component: ReviewForm
+  }, {
+    path: '/review/form/:id',
+    name: 'reviewUpdateForm',
+    component: ReviewForm
   }, {
     path: '/review/:id',
     name: 'review',
