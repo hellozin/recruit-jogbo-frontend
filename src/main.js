@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
+import EventBus from './EventBus'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -35,6 +36,7 @@ instance.interceptors.response.use(
 )
 
 Vue.prototype.$http = instance
+Vue.prototype.$bus = EventBus
 
 new Vue({
   router,

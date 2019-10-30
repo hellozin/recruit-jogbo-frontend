@@ -41,8 +41,11 @@ export default {
       const formData = JSON.stringify(this.form)
       this.$http.post(`/auth`, formData)
         .then(response => {
-          localStorage.setItem('apiToken', response.apiToken)
-          localStorage.setItem('username', response.member.username)
+          const apiToken = response.apiToken
+          const username = response.member.username
+          localStorage.setItem('apiToken', apiToken)
+          localStorage.setItem('username', username)
+          this.$bus.$emit('logged', true)
           this.$router.push('/')
         }).catch(error => {
           this.$bvToast.toast(error.errorMessage, {
