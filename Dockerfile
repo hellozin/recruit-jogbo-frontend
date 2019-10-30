@@ -31,3 +31,7 @@ RUN chown nginx:nginx /var/www/html
 
 # start nginx and keep the process from backgrounding and the container from quitting
 CMD ["nginx", "-g", "daemon off;"]
+
+# build & run
+# docker build -t <image name> <location>
+# docker run -p 8080:80 <image name>
