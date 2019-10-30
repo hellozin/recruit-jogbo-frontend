@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Join from '../views/Join.vue'
 import Confirm from '../views/Confirm.vue'
+import Member from '../views/Member.vue'
 import ReviewList from '../views/ReviewList.vue'
 import Review from '../views/Review.vue'
 import ReviewForm from '../views/ReviewForm.vue'
@@ -29,6 +30,10 @@ const routes = [
     path: '/confirm',
     name: 'confirm',
     component: Confirm
+  }, {
+    path: '/member',
+    name: 'member',
+    component: Member
   }, {
     path: '/review/list',
     name: 'reviewList',
