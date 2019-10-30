@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import ReviewList from '../views/ReviewList.vue'
+import Review from '../views/Review.vue'
 import Feedback from '../views/Feedback.vue'
 import Contact from '../views/Contact.vue'
 
@@ -19,8 +20,12 @@ const routes = [
     component: Login
   }, {
     path: '/review/list',
-    name: 'review',
+    name: 'reviewList',
     component: ReviewList
+  }, {
+    path: '/review/:id',
+    name: 'review',
+    component: Review
   }, {
     path: '/feedback',
     name: 'feedback',
