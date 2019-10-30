@@ -9,6 +9,10 @@
         <font-awesome-icon icon="exclamation-circle"></font-awesome-icon>
         조금 더 솔직하고 자세한 후기를 위해 모든 자료는 외부 업로드, 유출을 자제해 주시기 바랍니다.
       </p>
+      <p class="text-danger">
+        <font-awesome-icon icon="exclamation-circle"></font-awesome-icon>
+        아직은 테스트 기간입니다. 서버가 예고 없이 일시적으로 중단 될 수 있습니다.
+      </p>
     </div>
 
     <b-card no-body>

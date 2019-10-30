@@ -2,8 +2,8 @@
   <div>
     <b-form @submit="onSubmit" class="border border-info rounded p-3 my-3">
       <b-row>
-        <b-col cols="0" class="ml-2">
-          <span class="btn"><i class="fas fa-search"></i></span>
+        <b-col cols="0" class="ml-3">
+          <span><font-awesome-icon icon="search" size="2x"></font-awesome-icon></span>
         </b-col>
 
         <b-col>
