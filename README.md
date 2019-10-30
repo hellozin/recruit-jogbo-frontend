@@ -1,24 +1,19 @@
 # recruit-jogbo-frontend
 
-## Project setup
+Vue.js를 사용한 Recruit Jogbo의 Frontend 서버입니다.
+
+## Project Build
+
+Dockerfile이 있는 폴더에서 아래 명령어를 실행합니다.
+
 ```
-npm install
+docker build -t recruit-jogbo-frontend .
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Project Run
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Dockerfile이 있는 폴더에서 아래 명령어를 실행합니다.
 
-### Lints and fixes files
 ```
-npm run lint
+docker run -p 8080:80 recruit-jogbo-frontend
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
