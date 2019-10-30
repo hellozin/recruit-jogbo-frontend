@@ -18,12 +18,26 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.use(VueDisqus)
+
 Vue.config.productionTip = false
 
 const instance = axios.create({
   baseURL: 'http://localhost:8080/api',
   headers: {'Content-Type': 'application/json'}
 })
+
+instance.interceptors.request.use(
+  function (config) {
+    const apiToken = localStorage.getItem('apiToken')
+    if (apiToken) {
+      config.headers['api_key'] = `Bearer ${apiToken}`
+    }
+    return config
+  },
+  function (error) {
+    Promise.reject(error)
+  }
+)
 
 instance.interceptors.response.use(
   function (response) {
@@ -35,6 +49,15 @@ instance.interceptors.response.use(
   },
   function (error) {
     if (error.response) {
+      const errorResponse = error.response.data.response
+      if (errorResponse) {
+        if(errorResponse.status === 'UNAUTHORIZED') {
+          alert('로그인 정보가 없습니다!')
+          localStorage.removeItem('apiToken')
+          localStorage.removeItem('username')
+          window.location.href = '/login'
+        }
+      }
       return Promise.reject(error.response.data.response)
     } else {
       return Promise.reject(error)
