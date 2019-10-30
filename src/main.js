@@ -12,7 +12,10 @@ Vue.use(BootstrapVue)
 Vue.use(VueDisqus)
 Vue.config.productionTip = false
 
-const instance = axios.create({})
+const instance = axios.create({
+  baseURL: 'http://localhost:8080/api',
+  headers: {'Content-Type': 'application/json'}
+})
 
 Vue.prototype.$http = instance
 
