@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" class="border border-info rounded p-3 my-3">
+    <b-form @submit.prevent="onSubmit" class="border border-info rounded p-3 my-3">
       <b-row>
         <b-col cols="0" class="ml-3">
           <span><font-awesome-icon icon="search" size="2x"></font-awesome-icon></span>
@@ -47,15 +47,17 @@ export default {
       sort: [
         { value: '', text: '정렬', disabled: true },
         { value: 'createdAt,desc', text: '작성순' },
-        { value: 'deadLine,desc', text: '날짜순' }
+        { value: 'deadLine,asc', text: '날짜순' }
       ],
       emptyString: ''
     }
   },
   methods: {
-    onSubmit (event) {
-      event.preventDefault()
-      this.$http.get(`/review/list`, this.form)
+    onSubmit () {
+      const config = {
+        params: this.form
+      }
+      this.$http.get(`/review/list`, config)
         .then(response => {
           this.$emit('onSearch', response)
         })
