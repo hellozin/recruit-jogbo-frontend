@@ -22,7 +22,7 @@ Vue.use(VueDisqus)
 Vue.config.productionTip = false
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: 'http://www.recruit-jogbo-api.tk/api',
   headers: {'Content-Type': 'application/json'}
 })
 
