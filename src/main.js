@@ -55,10 +55,12 @@ instance.interceptors.response.use(
     if (error.response) {
       const errorResponse = error.response.data.response
       if (errorResponse) {
-        if(errorResponse.status === 'UNAUTHORIZED') {
-          localStorage.removeItem('apiToken')
-          localStorage.removeItem('username')
-          window.location.href = '/login'
+        switch (errorResponse.status) {
+          case 'UNAUTHORIZED':
+            localStorage.removeItem('apiToken')
+            localStorage.removeItem('username')
+            window.location.href = '/login?error=unauth'
+            break;
         }
       }
       return Promise.reject(error.response.data.response)
