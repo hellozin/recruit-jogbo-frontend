@@ -49,10 +49,13 @@ export default {
             .then(() => { this.$router.push('/login') })
         })
         .catch(error => {
-          this.$bvToast.toast(error.errorMessage, {
-            title: '가입 실패',
-            variant: 'danger'
-          })
+          const errorMessages = error.errorMessage.split(',')
+          for (var i in errorMessages) {
+            this.$bvToast.toast(errorMessages[i], {
+              title: '가입 실패',
+              variant: 'danger'
+            })
+          }
         })
     }
   }
