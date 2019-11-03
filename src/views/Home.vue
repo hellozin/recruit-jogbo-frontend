@@ -18,12 +18,22 @@
     <b-card no-body>
       <b-tabs card>
         <b-tab title="공지사항" active>
-          <b-card-text style="white-space: pre-line"><p>공지사항입니다.</p></b-card-text>
+          <vue-embed-gist gist-id="5381eeafc7d38fd163bfbad778dd7f66" file="RecruitJogbo"></vue-embed-gist>
         </b-tab>
       </b-tabs>
     </b-card>
   </div>
 </template>
+
+<script>
+import VueEmbedGist from 'vue-embed-gist'
+ 
+export default {
+  components: {
+    VueEmbedGist
+  }
+}
+</script>
 
 <style scoped>
 #jumbotron {
