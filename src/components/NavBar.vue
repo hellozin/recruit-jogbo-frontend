@@ -6,7 +6,8 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item v-on:click="forward('/review/list')">후기 게시판</b-nav-item>
+        <b-nav-item v-on:click="forward('/review/list')">취준 후기</b-nav-item>
+        <b-nav-item v-on:click="forward('/tip/list')">취준 팁</b-nav-item>
         <b-nav-item v-on:click="forward('/feedback')">건의사항</b-nav-item>
         <b-nav-item v-on:click="forward('/contact')">Contact Us</b-nav-item>
       </b-navbar-nav>

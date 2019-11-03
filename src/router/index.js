@@ -8,6 +8,9 @@ import Member from '../views/Member.vue'
 import ReviewList from '../views/ReviewList.vue'
 import Review from '../views/Review.vue'
 import ReviewForm from '../views/ReviewForm.vue'
+import TipList from '../views/TipList.vue'
+import Tip from '../views/Tip.vue'
+import TipForm from '../views/TipForm.vue'
 import Feedback from '../views/Feedback.vue'
 import Contact from '../views/Contact.vue'
 
@@ -50,6 +53,22 @@ const routes = [
     path: '/review/:id',
     name: 'review',
     component: Review
+  }, {
+    path: '/tip/list',
+    name: 'tipList',
+    component: TipList
+  },  {
+    path: '/tip/form',
+    name: 'tipCreateForm',
+    component: TipForm
+  }, {
+    path: '/tip/form/:id',
+    name: 'tipUpdateForm',
+    component: TipForm
+  }, {
+    path: '/tip/:id',
+    name: 'tip',
+    component: Tip
   }, {
     path: '/feedback',
     name: 'feedback',
