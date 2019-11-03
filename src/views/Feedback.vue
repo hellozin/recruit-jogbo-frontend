@@ -18,6 +18,7 @@ export default {
     }
   },
   created: function () {
+    this.$http.get('member/me')
     this.pageId = location.pathname
     this.url = location.origin
   }
