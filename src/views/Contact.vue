@@ -34,7 +34,8 @@
       <b-card class="my-2">
         <h3><font-awesome-icon :icon="['fab','slack']"></font-awesome-icon> Slack</h3>
         <hr>
-        <p>링크 : 준비중</p>
+        <p>새 글 알림 및 페이지에 대한 이야기나 간단한 질문을 위한 공간 (새 글 알림 준비중)</p>
+        <b-link href="https://join.slack.com/t/yuce-community/shared_invite/enQtODU1MDU5Mjc4OTI4LWVhNTBlMDMzZWQ1ZGI1YThmZmI2MGY1MDIyNTNjNWY4MDE3ZTI5ZWU4OGNmYTA5MGY1MzE2MWQ0ZjYyOWIyMDU">초대링크</b-link>
       </b-card>
     </b-card-text>
   </b-card>
