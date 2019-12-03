@@ -59,7 +59,7 @@ export default {
     const error = this.$route.query.error
     if (error) {
       if (error === 'unauth') {
-        this.$bvToast.toast('인증 정보가 없거나 만료되었습니다.', {
+        this.$bvToast.toast('로그인이 필요합니다.', {
             title: '로그인 실패',
             variant: 'danger'
           })
