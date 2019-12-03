@@ -18,7 +18,7 @@
       </b-form>
 
       <div class="p-3">
-        <p class="text-center lead mb-0">Manged by Hellozin</p>
+        <p class="text-center lead mb-0">Contact US</p>
         <p class="text-center blockquote-footer">paul26375@gmail.com</p>
       </div>
 
