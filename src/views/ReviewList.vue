@@ -5,7 +5,7 @@
     <div class="border rounded-lg p-3" style="background-color: azure">
       <router-link to="/review/form" class="btn btn-outline-primary mb-3" role="button">새 후기 작성</router-link>
 
-      <table class="table table-hover">
+      <table class="table table-hover" style="table-layout:fixed">
         <thead class="thead-light">
           <tr>
             <th class="text-center" style="width: 20%" v-for="header in tableHeaders" :key="header.id">{{ header }}</th>
@@ -99,3 +99,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+td {
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
+</style>
