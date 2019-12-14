@@ -7,7 +7,7 @@
         <b-card class="my-2">
           <h3><font-awesome-icon icon="envelope"></font-awesome-icon> Mail</h3>
           <hr>
-          <p>paul26375@gmail.com</p>
+          <p>recruitjogbo@gmail.com</p>
         </b-card>
 
         <b-card class="my-2">

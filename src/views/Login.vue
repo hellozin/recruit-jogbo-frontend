@@ -19,7 +19,7 @@
 
       <div class="p-3">
         <p class="text-center mb-0">Contact Us</p>
-        <p class="text-center blockquote-footer">paul26375@gmail.com</p>
+        <p class="text-center blockquote-footer">recruitjogbo@gmail.com</p>
       </div>
 
     </div>
