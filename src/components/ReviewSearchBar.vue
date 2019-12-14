@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="small-width-hide">
     <b-form @submit.prevent="onSubmit" class="border border-info rounded p-3 my-3">
       <b-row>
         <b-col cols="0" class="ml-3">
@@ -21,11 +21,11 @@
           <b-form-input v-model="form.authorName" placeholder="작성자"></b-form-input>
         </b-col>
 
-        <b-col cols="2">
+        <b-col>
           <b-form-select v-model="form.sort" :options="sort"></b-form-select>
         </b-col>
 
-        <b-col cols="1">
+        <b-col cols="auto">
           <b-button type="submit" variant="primary">조회</b-button>
         </b-col>
       </b-row>
@@ -83,3 +83,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (max-width: 780px) {
+  .small-width-hide { display: none; }
+}
+</style>
