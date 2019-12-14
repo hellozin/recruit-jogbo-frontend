@@ -12,12 +12,17 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faExclamationCircle, faEnvelope, faServer, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare, faSlack } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueAnalytics from 'vue-analytics'
 
 library.add(faExclamationCircle, faEnvelope, faGithubSquare, faServer, faSlack, faSearch)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.use(VueDisqus)
+Vue.use(VueAnalytics, {
+  id: 'UA-154591017-1',
+  router
+})
 
 Vue.config.productionTip = false
 
