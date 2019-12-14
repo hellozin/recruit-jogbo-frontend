@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="border shadow mx-auto p-5">
-      <p class="display-4 text-center p-3">Recruit Jogbo</p>
+      <h3 class="text-center mb-3">Recruit Jogbo</h3>
 
       <b-form class="w-75 mx-auto" @submit.prevent="onSubmit">
         <b-form-group>
@@ -18,7 +18,7 @@
       </b-form>
 
       <div class="p-3">
-        <p class="text-center lead mb-0">Contact US</p>
+        <p class="text-center mb-0">Contact Us</p>
         <p class="text-center blockquote-footer">paul26375@gmail.com</p>
       </div>
 
@@ -71,7 +71,7 @@ export default {
 
 <style scoped>
 .login {
-  width: 500px;
+  width: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
