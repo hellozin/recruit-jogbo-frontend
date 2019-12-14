@@ -13,12 +13,12 @@
       </b-navbar-nav>
 
       <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown right>
+        <b-nav-item v-if="!logged" v-on:click="forward('/login')">로그인</b-nav-item>
+        <b-nav-item-dropdown v-if="logged" right>
           <template v-slot:button-content>
             <a>{{ username }} 님 </a>
           </template>
           <b-dropdown-item v-if="logged" v-on:click="forward('/member')">내정보</b-dropdown-item>
-          <b-dropdown-item v-if="!logged" v-on:click="forward('/login')">로그인</b-dropdown-item>
           <b-dropdown-item v-if="logged" v-on:click="logout()">로그아웃</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
