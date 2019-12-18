@@ -11,7 +11,7 @@
       </tr>
     </table>
 
-    <p class="border p-3 lead" style="white-space: pre-line;" v-if="tip">{{ tip.content }}</p>
+    <p class="border p-3" style="white-space: pre-line;" v-if="tip">{{ tip.content }}</p>
 
     <button class="btn btn-primary mr-3" v-if="this.tip && this.tip.author.username === this.username" v-on:click="edit()">수정</button>
     <button class="btn btn-danger" v-if="this.tip && this.tip.author.username === this.username" v-on:click="deleteTip()">삭제</button>
